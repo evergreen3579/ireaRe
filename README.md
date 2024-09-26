@@ -1,2 +1,7 @@
---module-path "sdk의 lib 폴더 경로" --add-modules=javafx.fxml,javafx.controls
+사양에 맞게 17버전 다운
 <br>
+Java JDK 다운 : 
+https://jdk.java.net/archive/
+<br>
+JavaFX 다운 : 
+https://gluonhq.com/products/javafx/
