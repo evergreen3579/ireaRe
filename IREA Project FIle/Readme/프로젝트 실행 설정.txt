@@ -1,0 +1,5 @@
+1. Run > Run configuration > Main
+   실행 하고자하는 프로젝트의 메인클래스 파일 지정
+
+2. Run > Run configuration > [(x)=Arguments] > VM arguments > 작성
+   --module-path "JavaFX SDK lib 폴더 경로" --add-modules=javafx.fxml,javafx.controls

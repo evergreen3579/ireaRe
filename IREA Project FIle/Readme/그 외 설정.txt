@@ -1,0 +1,13 @@
+1. 이클립스의 다운받은 jdk17이 적용
+2. 프로젝트의 라이브러리 파일 Build Path 하여 적용
+3. 프로젝트 내 JDBCUtil.java 파일을 찾아 IREA.db파일의 경로 확인
+
+
+
+* 선택사항 *
+
+- SQLite Browser 설치
+  https://sqlitebrowser.org/dl/
+
+- SceneBuilder 설치
+  https://gluonhq.com/products/scene-builder/
