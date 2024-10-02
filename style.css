@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 body {
-  background: linear-gradient(135deg, rgba(12,50,52,1) 7%, rgba(85,117,91,1) 66%, rgba(138,173,152,1) 100%);
+  /* background: linear-gradient(135deg, #0c3234 7%, #55755b 66%, #8aad98 100%); */
+  background: linear-gradient(to right top, #153033, #364F48, #5E7863, #364F48, #153033);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   color: white;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  letter-spacing: -0.02em!important;
+  /* font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto; */
   margin: 0;
 }
 
@@ -18,14 +22,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
 }
 
 .login-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px;
+  margin: 43px;
 
   p {
     margin: 2px;
@@ -39,15 +42,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 450px;
-  height: 450px;
+  width: 430px;
+  height: 430px;
+  margin-bottom: 90px;
   border-radius: 50%;
   background-color: #8aaa9853;
 
   h1 {
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     font-size: 30px;
     font-weight: 600;
   }
@@ -60,9 +64,9 @@ body {
   align-items: center;
   
   input {
-    height: 33px;
+    height: 35px;
     margin: 7px;
-    width: 300px;
+    width: 270px;
     font-family: "Montserrat", sans-serif;
     padding-left: 20px;
     font-weight: 500;
@@ -73,29 +77,202 @@ body {
   }
 
   button {
-    height: 43px;
-    width: 150px;
+    height: 40px;
+    width: 140px;
     margin: 30px;
+    padding-bottom: 3px;
     border-radius: 7px;
     border-style: none;
     font-size: 20px;
     font-weight: 550;
     font-family: "Montserrat", sans-serif;
     color: #0c3234;
+    text-align: center;
   }
 }
 
-.right-nav { 
-  width: 150px; 
-  height: 300px; 
-  border-radius: 150px 0 0 150px;
-  background-color: #769482;
-  border: none;
+.signin-form {
+  width: 90%;
+
+  option {
+    background-color: #0c3234;
+    color: #eee;
+  }
 }
-.left-nav { 
-  width: 150px; 
-  height: 300px; 
-  border-radius: 0 150px 150px 0;
-  background-color: #8aad986e;
-  border: none;
+
+.signin-element {
+  background-color: rgba(255, 255, 255, 0.251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 600px;
+  border-radius: 10%;
+
+  h1 {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 550;
+    margin-bottom: 2px;
+  }
+
+  hr {
+    margin: 0;
+    border: 0;
+    border-bottom: 1.4px dashed #eee;
+    background: #999;
+  }
+  span {
+    margin-right: 25px;
+    text-align: right;
+  }
+
+  input {
+    background: none;
+    height: 20px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1.4px;
+    color: white;
+  }
+  select {
+    background: none;
+    height: 26px;
+    width: 100px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1.4px;
+    color: white;
+  }
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0 60px 0;
+
+  label {
+    font-size: 14px;
+    text-align: right;
+    width: 60px;
+    margin: 10px 40px 10px 0;
+  }
+}
+
+.name-gender{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    /* 수동 조절 함.. */
+    width: 120px;
+    margin-right: 120px;
+  }
+
+  select {
+    height: 26px;
+    width: 100px;
+  }
+}
+
+.birth_date {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.class-info {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0 60px 0;
+
+  hr {
+    margin-bottom: 8px;
+  }
+  input {
+    width: 100px;
+  }
+}
+
+.label-small {
+  font-size: 14px;
+  text-align: right;
+  width: 60px;
+  margin: 10px 40px 10px 0;
+}
+.label-big {
+  font-size: 14px;
+  text-align: right;
+  width: 100px;
+  margin: 10px 40px 10px 0;
+}
+
+.registration-date {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    width: 120px;
+    margin-right: 80px;
+  }
+
+  select {
+    height: 26px;
+    width: 100px;
+  }
+}
+
+.expiry_date{
+  display: flex;
+  align-items: center;
+}
+
+.lesson-input {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  select {
+    height: 26px;
+    width: 100px;
+    /* margin-right: 30px; */
+  }
+  label {
+    margin: 10px 40px 10px 10px;
+  }
+}
+
+.payment_option {
+  display: flex;
+  width: 100px;
+}
+
+.payment_method {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
 }
