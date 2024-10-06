@@ -8,7 +8,8 @@
 }
 
 body {
-  background: linear-gradient(to right top, #153033, #364F48, #5E7863, #364F48, #153033);
+  background-image: url('./img/background.jpg');
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
