@@ -23,3 +23,33 @@ body {
   display: flex;
   margin-bottom: 5px; /* 줄 간 간격 */
 }
+
+#modalWrap {
+  position: fixed; /* 화면에 고정 */
+  z-index: 1; /* 상위에 위치 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경색 */
+  display: none; /* 초기에는 숨김 */
+}
+
+#modalBody {
+  width: 500px;
+  height: 300px;
+  padding: 30px 30px;
+  margin: 0 auto;
+  border: 1px solid #777;
+  background-color: #fff;
+}
+
+#closeBtn {
+  float: right;
+  font-weight: bold;
+  color: #777;
+  font-size: 25px;
+  cursor: pointer;
+}
