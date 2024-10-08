@@ -1,9 +1,16 @@
+let globalIdCounter = 0;
+
 function createLockerRow() {
   const innerDiv = document.createElement('div');
 
   for (let i = 0; i < 11; i++) {
     const button = document.createElement('button');
     button.classList.add('popupBtn');
+    //button마다 id 부여
+
+    button.id = globalIdCounter;
+    globalIdCounter++;
+
     innerDiv.appendChild(button);
   }
 
@@ -16,6 +23,7 @@ function createLockerBox() {
 
   outerDiv.appendChild(createLockerRow());
   outerDiv.appendChild(createLockerRow());
+  outerDiv.classList.add('locker-box')
 
   return outerDiv;
 }

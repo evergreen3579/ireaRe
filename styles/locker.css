@@ -24,6 +24,15 @@ body {
   margin-bottom: 5px; /* 줄 간 간격 */
 }
 
+.popupBtn {
+  width: 70px;
+  height: 70px;
+}
+
+.locker-box{
+  margin: 20px;
+}
+
 #modalWrap {
   position: fixed; /* 화면에 고정 */
   z-index: 1; /* 상위에 위치 */
