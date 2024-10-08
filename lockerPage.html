@@ -23,11 +23,55 @@
     <!-- Locker btn 생성 js에서 -->
     <script src="./js/locker.js"></script>
   </section>
+  <!-- Locker 선택시 뜨는 창. js에서 생성 -->
   <section id="modalWrap">
-    <!-- Locker 선택시 뜨는 창. js에서 생성 -->
     <div id="modalBody">
-      <span id="closeBtn">&times;</span> <!--X 버튼-->
-      <P>Locker 내용</P>
+      <form>
+        <span id="closeBtn">&times;</span> <!--X 버튼-->
+        <span>회원 검색</span><input type="text" />
+        <div class="search-result">
+          <!-- 결과 출력 -->
+        </div>
+        <div>
+          <span>등록 회원</span><span><!-- 회원 이름 출력--></span>
+        </div>
+        <!-- 라커 등록 정보 -->
+        <div class="registration-date">
+          <label class="label-small" for="start_date">등록일자</label>
+          <input type="date" id="start_date" name="start_date" required>
+          
+          <label class="label-big" for="months">등록기간(개월)</label>
+            <select type="number" id="months" name="months" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          
+        </div>
+        <div class="expiry_date">
+          <label class="label-small" for="expiry_date">만료일</label>
+          <input type="date" id="expiry_date" name="expiry_date" readonly>  
+        </div>
+        <!-- 만료일 계산 js -->
+        <script src="./js/expiryDate.js"></script>
+
+        <div class="payment_method">
+          <label class="label-small">결제방법</label>
+          <select class="payment_option" id="payment_option" name="payment_option" required>
+            <option value="A">카드</option>
+            <option value="B">현금</option>
+            <option value="C">기타</option>
+          </select>
+        </div>
+        
+        <div class="price">
+          <label class="label-small">가격</label>
+          <input type="text" id="price" name="price" placeholder="30만원" readonly>
+        </div>
+      </div>
+      <button type="submit">제출</button>
+      </form>
     </div>
     <script src="./js/lockerPopup.js"></script>
   </section>

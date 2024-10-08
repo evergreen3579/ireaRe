@@ -47,10 +47,10 @@ body {
 }
 
 #modalBody {
-  width: 500px;
-  height: 300px;
+  width: 800px;
+  height: 500px;
   padding: 30px 30px;
-  margin: 0 auto;
+  margin: 50px auto;
   border: 1px solid #777;
   background-color: #fff;
 }
