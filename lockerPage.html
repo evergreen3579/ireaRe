@@ -40,14 +40,18 @@
           <label class="label-small" for="start_date">등록일자</label>
           <input type="date" id="start_date" name="start_date" required>
           
-          <label class="label-big" for="months">등록기간(개월)</label>
-            <select type="number" id="months" name="months" required>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          
+          <label>등록기간</label>
+          <div class="custom-select" id="month-select">
+            <div class="select-selected">등록기간</div>
+            <div class="select-items">
+              <script>
+                for (let month = 1; month <= 12; month++) {
+                  document.write('<div data-value="' + month + '">' + month + '</div>');
+                }
+              </script>
+            </div>
+          </div>
+          <script src="./js/customSelect.js"></script>
         </div>
         <div class="expiry_date">
           <label class="label-small" for="expiry_date">만료일</label>
