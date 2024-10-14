@@ -55,6 +55,12 @@ header {
   }
 }
 
+.subtitle-right {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 10px;
+}
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -81,7 +87,10 @@ header {
 }
 
 .data-container {
-  width: 900px;
+  width: 1000px;
   height: 300px;
   border: solid #fff 1.3px;
+  background-color: #a6b0ad36;
+  margin: auto;
+  color: #fff;
 }
