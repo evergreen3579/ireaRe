@@ -28,12 +28,14 @@
             </select>
             
           </div>
-          <div class="birth_date">
+          <div class="input-container">
             <label for="birth_year">생년월일</label>
             
             <!-- 연도 드롭다운 -->
             <div class="custom-select" id="year-select">
-              <div class="select-selected">Year</div>
+              <div class="select-selected">Year
+                <img src="./styles/img/downtriangle.png" alt="selectBtnImg" />
+              </div>
               <div class="select-items">
                 <script>
                   for (let year = 1920; year <= 2024; year++) {
@@ -45,7 +47,9 @@
         
             <!-- 월 드롭다운 -->
             <div class="custom-select" id="month-select">
-              <div class="select-selected">Month</div>
+              <div class="select-selected">Month
+                <img src="./styles/img/downtriangle.png" alt="selectBtnImg" />
+              </div>
               <div class="select-items">
                 <script>
                   for (let month = 1; month <= 12; month++) {
@@ -57,7 +61,9 @@
         
             <!-- 일 드롭다운 -->
             <div class="custom-select" id="day-select">
-              <div class="select-selected">Day</div>
+              <div class="select-selected">Day
+                <img src="./styles/img/downtriangle.png" alt="selectBtnImg" />
+              </div>
               <div class="select-items">
                 <script>
                   for (let day = 1; day <= 31; day++) {
@@ -69,7 +75,7 @@
           </div>
         
           <script src="./js/customSelect.js"></script>
-          <div class="phone">
+          <div class="input-container">
             <label>전화번호</label>
             <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
           </div>
@@ -93,14 +99,14 @@
             </select>
           
         </div>
-        <div class="expiry_date">
+        <div class="input-container">
           <label class="label-small" for="expiry_date">만료일</label>
           <input type="date" id="expiry_date" name="expiry_date" readonly>  
         </div>
         <!-- 만료일 계산 js -->
         <script src="./js/expiryDate.js"></script>
 
-        <div class="lesson-input">
+        <div class="lesson-info-container">
           <div>
             <label class="label-small">골프레슨</label>
             <select id="lesson" name="lesson" required>
@@ -118,7 +124,7 @@
             </select>
           </div>
         </div>
-        <div class="payment_method">
+        <div class="input-container">
           <label class="label-small">결제방법</label>
           <select class="payment_option" id="payment_option" name="payment_option" required>
             <option value="A">카드</option>
@@ -127,7 +133,7 @@
           </select>
         </div>
         
-        <div class="price">
+        <div class="input-container">
           <label class="label-small">가격</label>
           <input type="text" id="price" name="price" placeholder="30만원" readonly>
         </div>
