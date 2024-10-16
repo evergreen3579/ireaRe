@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Pretendard-B';
+  src: url('./fonts/Pretendard-Bold.ttf');
+}
+@font-face {
+  font-family: 'Pretendard-SB';
+  src: url('./fonts/Pretendard-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Pretendard-R';
+  src: url('./fonts/Pretendard-Regular.ttf');
+}
+@font-face {
+  font-family: 'NotoSans-R';
+  src: url('./fonts/NotoSansKR-Regular.ttf');
+}
+
 body {
   background-image: url('./img/background.jpg');
   background-size: cover;
@@ -26,18 +43,20 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  width: 600px;
+  width: 650px;
   border-radius: 10%;
 
   h1 {
     font-size: 25px;
     margin-top: 0;
     margin-bottom: 60px;
+    font-family: 'Pretendard-B';
+    font-size: 26;
   }
 
   h2 {
-    font-size: 18px;
-    font-weight: 550;
+    font-family: 'Pretendard-SB';
+    font-size: 21px;
     margin-bottom: 2px;
   }
 
@@ -54,7 +73,8 @@ body {
 
   input {
     background: none;
-    height: 20px;
+    height: 23px;
+    padding: 3px;
     border-color: white;
     border-style: solid;
     border-radius: 8px;
@@ -63,8 +83,9 @@ body {
   }
   select {
     background: none;
-    height: 26px;
-    width: 100px;
+    height: 30px;
+    padding: 3px;
+    width: 120px;
     border-color: white;
     border-style: solid;
     border-radius: 8px;
@@ -77,9 +98,11 @@ body {
   display: flex;
   flex-direction: column;
   margin: 8px 0 60px 0;
+  font-family: 'Pretendard-R';
+  font-size: 15;
 
   label {
-    font-size: 14px;
+    font-size: 15px;
     text-align: right;
     width: 60px;
     margin: 10px 40px 10px 0;
@@ -90,16 +113,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 5px 0 15px 0;
 
   input {
     /* 수동 조절 함.. */
     width: 120px;
     margin-right: 120px;
-  }
-
-  select {
-    height: 26px;
-    width: 100px;
   }
 }
 
@@ -107,9 +126,16 @@ body {
   display: flex;
   align-items: center;
   height: 40px;
+  margin: 5px 0 15px 0;
+
+  input {
+    margin-left: 5px;
+  }
+
+  select {
+    margin-left: 3px;
+  }
 }
-
-
 
 .class-info {
   display: flex;
@@ -141,14 +167,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 5px 0 15px 0;
   input {
     width: 120px;
     margin-right: 80px;
-  }
-
-  select {
-    height: 26px;
-    width: 100px;
   }
 }
 
@@ -164,17 +186,21 @@ body {
 
 .lesson-info-container {
   display: flex;
+  margin: 5px 0 15px 0;
   justify-content: space-between;
   align-items: center;
   height: 40px;
+
+  select {
+    margin-left: 3px;
+  }
 }
 
 /* 기본 셀렉트 스타일 */
 .custom-select {
   position: relative;
   display: inline-block;
-  width: 70px;
-  margin-right: 10px;
+  width: auto;
   font-size: 15px;
 
   img {
@@ -185,8 +211,10 @@ body {
 /* 선택된 항목 스타일 */
 .select-selected {
   background-color: none;
-  padding: 1.5px;
-  padding-bottom: 3px;
+  height: 23px;
+  width: 70px;
+  padding-top: 5px;
+  margin: 5px;
   border: 1.3px solid white;
   cursor: pointer;
   border-radius: 8px;
@@ -197,7 +225,7 @@ body {
 .select-items {
   display: none;
   position: absolute;
-  width: 100%;
+  width: 90%;
   max-height: 200px; /* 한 번에 10개 정도만 보이도록 제한 */
   overflow-y: auto;  /* 스크롤 추가 */
   background-color: white;
@@ -221,4 +249,15 @@ body {
 /* 드롭다운 아이템 마지막 항목에서 밑줄 제거 */
 .select-items div:last-child {
   border-bottom: none;
+}
+
+.submit-btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.submit-btn {
+  width: 75px;
+  height: 30px;
+  font-family: 'Pretendard-R';
 }
