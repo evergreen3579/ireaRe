@@ -1,36 +1,94 @@
+@font-face {
+  font-family: 'Pretendard-M';
+  src: url('./fonts/Pretendard-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Pretendard-R';
+  src: url('./fonts/Pretendard-Regular.ttf');
+}
+
 body {
   background-image: url('./img/background.jpg');
   background-size: cover;
-}
-
-.box-container {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px; /* 4개의 묶음 간 여백 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 정사각형 박스 */
-.box {
-  width: 50px;
-  height: 50px;
-  background-color: brown;
-  border: 1px solid #333;
-  display: inline-block;
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 30px;
+  font-family: 'Pretendard-M';
+  font-size: 14px;
+  color: #fff;
+}
+
+hr {
+  width: 90%;
+}
+
+section {
+  width: 80%;
+}
+
+.locker-info-container {
+  display: flex;
+  margin: 15px;
+  justify-content: space-between;
+  color: #fff;
+  font-family: 'Pretendard-M';
+  font-size: 13px;
+  span {
+    display: flex;
+    align-items: center;
+    div {
+      width: 4px;
+      height: 13px;
+      margin-right: 10px;
+      margin-left: 4px;
+      background-color: #fff;
+    }
+  }
+}
+
+.locker-info-colorbox {
+  display: flex;
+
+  div {
+    width: 30px;
+    height: 25px;
+    margin: 0 10px;
+    border: solid 0.1px;
+  }
+}
+
+#box-wrapper {
+  border: solid 1px #fff;
 }
 
 /* 가로로 11개의 박스를 한 줄에 정렬 */
 .row {
   display: flex;
-  margin-bottom: 5px; /* 줄 간 간격 */
+  margin-bottom: 1px; /* 줄 간 간격 */
 }
 
 .popupBtn {
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 75px;
+  margin: 1px;
+  border: solid 0.1px #fff;
+  background-color: #ffffff80;
 }
 
 .locker-box{
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #modalWrap {
@@ -51,8 +109,10 @@ body {
   height: 500px;
   padding: 30px 30px;
   margin: 50px auto;
-  border: 1px solid #777;
-  background-color: #00382e;
+  border: solid 1.8px #fff;
+  background-color: #003128;
+  color: #fff;
+  font-family: 'Pretendard-R';
 }
 
 #closeBtn {
