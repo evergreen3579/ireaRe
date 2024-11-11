@@ -1,4 +1,4 @@
-let globalIdCounter = 0;
+let globalIdCounter = 1;
 
 function createLockerRow() {
   const innerDiv = document.createElement('div');
@@ -9,6 +9,7 @@ function createLockerRow() {
     //button마다 id 부여
 
     button.id = globalIdCounter;
+    button.textContent = `${globalIdCounter}`
     globalIdCounter++;
 
     innerDiv.appendChild(button);

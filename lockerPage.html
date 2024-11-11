@@ -13,9 +13,9 @@
     <div class="locker-info-container">
       <span>라커<div></div>78/110</span>
       <div class="locker-info-colorbox">
-        <div style="background-color: #ffffff80;"></div>
+        <div style="background-color: #ffffff36;"></div>
         <span>등록된 라커</span>
-        <div style="background-color: #ffffff18;"></div>
+        <div style="background-color: #00382e"></div>
         <span>빈 라커</span>
       </div>
     </div>
@@ -26,54 +26,92 @@
   <!-- Locker 선택시 뜨는 창. js에서 생성 -->
   <section id="modalWrap">
     <div id="modalBody">
+      <span id="closeBtn">&times;</span> <!--X 버튼-->
       <form>
-        <span id="closeBtn">&times;</span> <!--X 버튼-->
-        <span>회원 검색</span><input type="text" />
+        <span class="search-input">회원 검색<input type="text" /></span>
         <div class="search-result">
-          <!-- 결과 출력 -->
+          <table class="styled-table">
+            <thead>
+              <tr class="search-result-title">
+                <th>이름</th>
+                <th>성별</th>
+                <th>생년월일</th>
+                <th>전화번호</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 결과 출력 -->
+              <tr>
+                <td>이지원</td>
+                <td>남</td>
+                <td>040128</td>
+                <td>01072394628</td>
+                <td class="member-btn"><button class="action-btn">등록</button></td>
+              </tr>
+              <tr>
+                <td>이지은</td>
+                <td>여</td>
+                <td>040128</td>
+                <td>01072394628</td>
+                <td class="member-btn"><button class="action-btn">등록</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div>
-          <span>등록 회원</span><span><!-- 회원 이름 출력--></span>
+        <div class="member-name-box">
+          <span>등록 회원</span><span class="member-name"><!-- 회원 이름 출력-->이지원</span>
         </div>
         <!-- 라커 등록 정보 -->
-        <div class="registration-date">
-          <label class="label-small" for="start_date">등록일자</label>
-          <input type="date" id="start_date" name="start_date" required>
+        <div class="registration-box">
+          <div class="registration-date">
+            <label class="label-small" for="start_date">등록일자
+              <input type="date" id="start_date" name="start_date" required>
+            </label>
+            
           
-          <label>등록기간</label>
-          <div class="custom-select" id="month-select">
-            <div class="select-selected">등록기간</div>
-            <div class="select-items">
-              <script>
-                for (let month = 1; month <= 12; month++) {
-                  document.write('<div data-value="' + month + '">' + month + '</div>');
-                }
-              </script>
+            <label class="label-small">등록기간
+              <select type="number" id="months" name="months" required>
+                <option value="1">1개월</option>
+                <option value="2">2개월</option>
+                <option value="3">3개월</option>
+                <option value="4">4개월</option>
+                <option value="5">5개월</option>
+                <option value="6">6개월</option>
+                <option value="7">7개월</option>
+                <option value="8">8개월</option>
+                <option value="9">9개월</option>
+                <option value="10">10개월</option>
+                <option value="11">11개월</option>
+                <option value="12">12개월</option>
+              </select>
+            </label>
+          </div>
+          <div  class="label-small">
+            <label for="expiry_date">만료일</label>
+            <input type="date" id="expiry_date" name="expiry_date" readonly>  
+          </div>
+          <!-- 만료일 계산 js -->
+          <script src="./js/expiryDate.js"></script>
+
+          <div class="payment-info">
+            <div  class="label-small">
+              <label>가격</label>
+              <div id="price" class="price"><!-- 가격 -->3만원</div>
+            </div>
+
+            <div class="label-small">
+              <label>결제방법</label>
+              <select class="payment_option" id="payment_option" name="payment_option" required>
+                <option value="A">카드</option>
+                <option value="B">현금</option>
+                <option value="C">기타</option>
+              </select>
             </div>
           </div>
-          <script src="./js/customSelect.js"></script>
-        </div>
-        <div class="expiry_date">
-          <label class="label-small" for="expiry_date">만료일</label>
-          <input type="date" id="expiry_date" name="expiry_date" readonly>  
-        </div>
-        <!-- 만료일 계산 js -->
-        <script src="./js/expiryDate.js"></script>
-
-        <div class="payment_method">
-          <label class="label-small">결제방법</label>
-          <select class="payment_option" id="payment_option" name="payment_option" required>
-            <option value="A">카드</option>
-            <option value="B">현금</option>
-            <option value="C">기타</option>
-          </select>
         </div>
         
-        <div class="price">
-          <label class="label-small">가격</label>
-          <input type="text" id="price" name="price" placeholder="30만원" readonly>
-        </div>
-      <button type="submit">제출</button>
+      <button class="register-btn" type="submit">등록</button>
       </form>
     </div>
     <script src="./js/lockerPopup.js"></script>
