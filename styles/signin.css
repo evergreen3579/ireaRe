@@ -15,6 +15,12 @@
   src: url('./fonts/NotoSansKR-Regular.ttf');
 }
 
+header h3 {
+  font-family: "Pretendard-R";
+  font-size: 14px;
+  margin: 35px 0 45px;
+}
+
 body {
   background-image: url('./img/background.jpg');
   background-size: cover;
@@ -27,15 +33,6 @@ body {
   margin: 0;
 }
 
-.signin-form {
-  width: 90%;
-  
-  option {
-    background-color: #0c3234;
-    color: #eee;
-  }
-}
-
 .signin-element {
   background-color: rgba(255, 255, 255, 0.251);
   display: flex;
@@ -45,6 +42,9 @@ body {
   padding: 30px;
   width: 650px;
   border-radius: 10%;
+  overflow: auto;
+  font-family: 'Pretendard-R';
+  font-size: 15px;
 
   h1 {
     font-size: 25px;
@@ -61,31 +61,28 @@ body {
   }
 
   hr {
-    margin: 0;
+    margin: 8px 0 15px;
     border: 0;
     border-bottom: 1.4px dashed #eee;
     background: #999;
   }
-  span {
-    margin-right: 25px;
-    text-align: right;
-  }
 
   input {
     background: none;
-    height: 23px;
-    padding: 3px;
+    height: 30px;
     border-color: white;
+    padding: 3px;
     border-style: solid;
     border-radius: 8px;
     border-width: 1.3px;
     color: white;
+    box-sizing: border-box;
   }
+
   select {
     background: none;
     height: 30px;
     padding: 3px;
-    width: 120px;
     border-color: white;
     border-style: solid;
     border-radius: 8px;
@@ -94,89 +91,49 @@ body {
   }
 }
 
-.personal-info {
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0 60px 0;
-  font-family: 'Pretendard-R';
-  font-size: 15;
-
-  label {
-    font-size: 15px;
-    text-align: right;
-    width: 60px;
-    margin: 10px 40px 10px 0;
+.signin-form {
+  width: 90%;
+  
+  option {
+    background-color: #0c3234;
+    color: #eee;
   }
 }
 
-.name-gender{
+
+.registration-date, .lesson-info-container, .name-gender-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 5px 0 15px 0;
-
-  input {
-    /* 수동 조절 함.. */
-    width: 120px;
-    margin-right: 120px;
-  }
+  align-items: center;
 }
 
-.input-container {
+.big-input-container {
+  width: 330px;
   display: flex;
+  justify-content: space-between;
+  margin: 5px 0 15px;
   align-items: center;
-  height: 40px;
-  margin: 5px 0 15px 0;
+}
 
-  input {
-    margin-left: 5px;
-  }
+.big-input-container label {
+  width: 60px;
+  display: flex;
+  justify-content: right;
+}
 
-  select {
-    margin-left: 3px;
-  }
+.birth-cont, input {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .class-info {
   display: flex;
   flex-direction: column;
   margin-top: 8px;
-
-  hr {
-    margin-bottom: 8px;
-  }
-  input {
-    width: 100px;
-  }
-}
-
-.label-small {
-  font-size: 14px;
-  text-align: right;
-  width: 60px;
-  margin: 10px 40px 10px 0;
-}
-.label-big {
-  font-size: 14px;
-  text-align: right;
-  width: 100px;
-  margin: 10px 40px 10px 0;
-}
-
-.registration-date {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px 0 15px 0;
-  input {
-    width: 120px;
-    margin-right: 80px;
-  }
-}
-
-.payment_option {
-  display: flex;
-  width: 100px;
+  font-family: "Pretendard-R";
+  font-size: 15px;
 }
 
 ::placeholder {
@@ -184,16 +141,50 @@ body {
   opacity: 1; /* Firefox */
 }
 
-.lesson-info-container {
+.label-small, .label-big {
   display: flex;
-  margin: 5px 0 15px 0;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  margin: 5px 0 15px;
+}
 
-  select {
-    margin-left: 3px;
-  }
+.label-small {
+  width: 240px;
+}
+
+.label-big {
+  width: 270px;
+}
+
+.label-small input, select, .price {
+  width: 140px;
+}
+
+.label-small span {
+  width: 60px;
+  display: flex;
+  justify-content: right;
+}
+
+.label-big span {
+  width: 90px;
+  display: flex;
+  justify-content: right;
+}
+
+/* 가격 출력창 스타일링 */
+.price {
+  width: 140px;
+  height: 30px;
+  padding-left: 7px;
+  background: none;
+  border: 0.5px solid #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
 
 /* 기본 셀렉트 스타일 */
@@ -201,24 +192,27 @@ body {
   position: relative;
   display: inline-block;
   width: auto;
-  font-size: 15px;
+  margin: 0;
 
   img {
     width: 10px;
     height: 10px;
   }
 }
+
 /* 선택된 항목 스타일 */
 .select-selected {
   background-color: none;
   height: 23px;
-  width: 70px;
-  padding-top: 5px;
-  margin: 5px;
+  width: 65px;
+  padding: 2px;
+  margin: 0;
   border: 1.3px solid white;
   cursor: pointer;
   border-radius: 8px;
   text-align: center;
+  font-family: "NotoSans-R";
+  font-size: 13px;
 }
 
 /* 드롭다운 아이템 컨테이너 */

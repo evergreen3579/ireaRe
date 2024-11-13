@@ -17,20 +17,25 @@
         <h2>회원정보</h2>
         <hr>
         <div class="personal-info">
-          <div class="name-gender">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required>
+          <div class="name-gender-container">
+            <label for="name" class="label-small">
+              <span>이름</span>
+              <input type="text" id="name" name="name" required>
+            </label>
             
-            <label>성별</label>
-            <select id="gender" name="gender" required>
-              <option value="female">여자</option>
-              <option value="male">남자</option>
-            </select>
+            
+            <label class="label-big">
+              <span>성별</span>
+              <select id="gender" name="gender" required>
+                <option value="female">여자</option>
+                <option value="male">남자</option>
+              </select>
+            </label>
             
           </div>
-          <div class="input-container">
+          <div class="big-input-container">
             <label for="birth_year">생년월일</label>
-            
+            <div class="birth-cont">
             <!-- 연도 드롭다운 -->
             <div class="custom-select" id="year-select">
               <div class="select-selected">Year
@@ -72,10 +77,11 @@
                 </script>
               </div>
             </div>
+            </div>
           </div>
         
           <script src="./js/customSelect.js"></script>
-          <div class="input-container">
+          <div class="big-input-container">
             <label>전화번호</label>
             <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
           </div>
@@ -87,56 +93,59 @@
         <h2>수업정보</h2>
         <hr>
         <div class="registration-date">
-          <label class="label-small" for="start_date">등록일자</label>
-          <input type="date" id="start_date" name="start_date" required>
+          <label class="label-small" for="start_date">
+            <span>등록일자</span>
+            <input type="date" id="start_date" name="start_date" required>
+          </label>
           
-          <label class="label-big" for="months">등록기간(개월)</label>
+          <label class="label-big" for="months">
+            <span>등록기간(개월)</span>
             <select type="number" id="months" name="months" required>
               <option value="1">1</option>
               <option value="3">3</option>
               <option value="6">6</option>
               <option value="12">12</option>
             </select>
-          
+          </label>
         </div>
-        <div class="input-container">
-          <label class="label-small" for="expiry_date">만료일</label>
+
+        <label class="label-small" for="expiry_date">
+          <span>만료일</span>
           <input type="date" id="expiry_date" name="expiry_date" readonly>  
-        </div>
+        </label>
         <!-- 만료일 계산 js -->
         <script src="./js/expiryDate.js"></script>
 
         <div class="lesson-info-container">
-          <div>
-            <label class="label-small">골프레슨</label>
+          <label class="label-small">
+            <span>골프레슨</span>
             <select id="lesson" name="lesson" required>
               <option value="true">O</option>
               <option value="false">X</option>
             </select>
-          </div>
-          <div>
-            <label class="label-big">담당프로 선택</label>
+          </label>
+          <label class="label-big">
+            <span>담당프로 선택</span>
             <select id="manager" name="manager" required>
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
               <option value="D">D</option>
             </select>
-          </div>
+          </label>
         </div>
-        <div class="input-container">
-          <label class="label-small">결제방법</label>
-          <select class="payment_option" id="payment_option" name="payment_option" required>
+        <label class="label-small">
+          <span>결제방법</span>
+          <select id="payment_option" name="payment_option" required>
             <option value="A">카드</option>
             <option value="B">현금</option>
             <option value="C">기타</option>
           </select>
-        </div>
-        
-        <div class="input-container">
-          <label class="label-small">가격</label>
-          <input type="text" id="price" name="price" placeholder="30만원" readonly>
-        </div>
+        </label>
+        <label class="label-small">
+          <span>가격</span>
+          <div id="price" class="price">30만원</div>
+        </label>
       </div>
       <div class="submit-btn-container">
         <button class="submit-btn" type="submit">등록</button>
