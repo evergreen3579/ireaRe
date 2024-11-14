@@ -38,6 +38,7 @@ body {
   display: flex;
   height: 80%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 30px;
   width: 650px;
@@ -131,7 +132,7 @@ body {
 .class-info {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
+  margin-top: 40px;
   font-family: "Pretendard-R";
   font-size: 15px;
 }
@@ -248,6 +249,7 @@ body {
 .submit-btn-container {
   display: flex;
   flex-direction: row-reverse;
+  margin-top: 50px;
 }
 
 .submit-btn {
