@@ -11,6 +11,10 @@
   src: url('./fonts/Pretendard-Regular.ttf');
 }
 @font-face {
+  font-family: 'Pretendard-M';
+  src: url('./fonts/Pretendard-Medium.ttf');
+}
+@font-face {
   font-family: 'NotoSans-R';
   src: url('./fonts/NotoSansKR-Regular.ttf');
 }
@@ -18,7 +22,27 @@
 header h3 {
   font-family: "Pretendard-R";
   font-size: 14px;
-  margin: 35px 0 45px;
+  margin: 35px 0 20px;
+}
+
+header {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  width: 90%;
+  margin-bottom: 20px;
+
+  button {
+    font-family: 'Pretendard-M';
+    padding: 5px 10px;
+  font-size: 12px;
+  }
 }
 
 body {
@@ -41,6 +65,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  margin-bottom: 30px;
   width: 650px;
   border-radius: 10%;
   overflow: auto;

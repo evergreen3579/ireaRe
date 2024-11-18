@@ -28,6 +28,22 @@ header{
   margin-top: 20px;
   font-family: "Pretendard-M";
   font-size: 14px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  width: 90%;
+}
+
+header button {
+  font-family: 'Pretendard-M';
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 /* 출력 table css */

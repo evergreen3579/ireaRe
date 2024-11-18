@@ -19,12 +19,26 @@ body {
 
 header {
   display: flex;
+  width: 80%;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 18px;
   margin-bottom: 30px;
   font-family: 'Pretendard-M';
   font-size: 14px;
   color: #fff;
+}
+
+header div {
+  display: flex;
+  width: 90%;
+}
+
+header button {
+  font-family: 'Pretendard-M';
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 hr {
@@ -68,6 +82,7 @@ section {
 
 #box-wrapper {
   border: solid 1px #fff;
+  padding: auto;
 }
 
 /* 가로로 11개의 박스를 한 줄에 정렬 */
