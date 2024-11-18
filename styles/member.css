@@ -64,7 +64,7 @@ section {
 }
 
 h3 {
-  margin-bottom: 40px;
+  margin: 0 auto 30px;
   font-family: "Pretendard-B";
   font-size: 26px;
 }
@@ -138,11 +138,12 @@ article {
 }
 
 .styled-table {
-  height: 500px;
+  height: 450px;
   margin: 10px;
   border: solid 1px #fff;
   font-family: "Pretendard-R";
   font-size: 13px;
+  box-sizing: border-box;
 }
 
 .table-title {
