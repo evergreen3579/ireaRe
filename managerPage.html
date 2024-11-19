@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="./styles/manager.css">
 </head>
 <body>
-  <header><p>IREA GOLF ACADEMY</p></header>
+  <header>
+    <p>IREA GOLF ACADEMY</p>
+    <div><button onclick="location.href='homePage.html'">뒤로가기</button></div>
+  </header>
   <section>
     <h3>직원관리</h3>
-    <div><button>+</button></div>
+    <div class="btn-container"><button>+</button></div>
     <article class="styled-table">
       <div class="table-title">
-        <div>이름</div>
-        <div>아이디</div>
-        <div>비밀번호</div>
-        <div></div>
+        <div class="small">이름</div>
+        <div class="small">아이디</div>
+        <div class="big">비밀번호</div>
+        <div class="button-cont"></div>
       </div>
       <div class="table-contents">
-        <div>이상준</div>
-        <div>admin</div>
-        <div>1234</div>
-        <div>
+        <div class="small">이상준</div>
+        <div class="small">admin</div>
+        <div class="big">1234</div>
+        <div class="button-cont">
           <button>수정</button>
           <button>삭제</button>
         </div>
